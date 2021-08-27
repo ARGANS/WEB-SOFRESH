@@ -1,0 +1,166 @@
+body {
+  color: #333;
+  font-weight: 400;
+  font: 14px/28px "Raleway";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+nav a {color: inherit;}
+
+
+.top-banner {
+  background-color: #01065f;
+  padding: 1rem 0;
+  color: #fff;
+}
+.top-banner li:not(:last-child) {margin-right: 1rem;}
+
+
+
+.main-banner {
+  border-bottom: 1px solid rgba( 0,0,0,0.08);
+  color: #010660;
+  padding: 12px 0 10px 0;
+  background-color: #fff;
+}
+.main-banner-list > li:not(:first-child) {padding-right: 1rem; padding-left: 1rem;}
+
+
+.sticky-top {position: sticky; top: 0px; z-index: 99999;}
+
+
+
+/* Hamgurger menu icon */
+.c-hamburger {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 24px;
+	height: 20px;
+	font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.c-hamburger:focus {outline: none;}
+.c-hamburger > span {
+	display: block;
+	position: absolute;
+	top: 9px;
+	left: 0px;
+	right: 0px;
+	height: 2px;
+	background-color: #545454;
+}
+.c-hamburger > span::before,
+.c-hamburger > span::after {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #545454;
+	content: "";
+}
+.c-hamburger > span::before {top: -9px;}
+.c-hamburger span::after {bottom: -9px;}
+.c-hamburger--htx { background-color: transparent;}
+.c-hamburger--htx > span::before,
+.c-hamburger--htx > span::after {transition-duration: 0.3s, 0.3s;transition-delay: 0.3s, 0s;}
+.c-hamburger--htx > span::before {transition-property: top, transform;}
+.c-hamburger--htx > span::after {transition-property: bottom, transform;}
+
+
+/* DropDown Menu */
+.dropdown-menu {
+  position: relative;
+  transition: height .3s;
+  overflow: hidden;
+  background-color: #232323;
+  height: 0;
+}
+.dropdown-menu-list {padding: 1rem 0;}
+.dropdown-menu-list > li {
+  font-size: 0.8rem;
+  line-height: 2rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid #303030;
+}
+.dropdown-menu-list > li:first-child {border-top: 0;font-size: 1.4rem;}
+.dropdown-menu-list > li > a {color: #aaa;transition: color .3s;}
+.dropdown-menu-list > li > a:hover,
+.dropdown-menu-list > li > a:focus {color: #fff;}
+
+
+/* Menu animations */
+.c-hamburger--htx.is-active > span::before,
+#menu:checked + .bcontainer .c-hamburger--htx > span::before {top: 0;transform: rotate(45deg);width: 26px;left: -4px;margin-left: 3px;}
+#menu:checked + .bcontainer .c-hamburger--htx span::after,
+.c-hamburger--htx.is-active span::after {bottom: 0;transform: rotate(-45deg);width: 26px;left: -4px;margin-left: 3px;}
+#menu:checked + .bcontainer .c-hamburger--htx > span::before,
+#menu:checked + .bcontainer .c-hamburger--htx > span::after,
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {transition-delay: 0s, 0.3s;}
+.c-hamburger--htx.is-active > span,
+#menu:checked + .bcontainer .c-hamburger--htx > span {background-color: transparent;}
+#menu:checked ~ .dropdown-menu {height: 510px;}
+
+
+.footer {
+  background-color: #262626;
+  color: #e3e3e3;
+}
+.footer-widget-block {
+  padding: 3rem 0;
+}
+.footer-widget-list > li:not(:last-child) {
+  margin-right: 2rem;
+} 
+.copyright-block {
+  background-color: #ffffff;
+  color: #6a6a6a;
+  padding: 0.5rem 0 2rem;
+
+}
+.copyright-block a {
+  color: inherit;
+}
+
+
+.splitted-list > li:not(:last-child):after {
+  content: "|";
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 0 1rem;
+}
+
+.section-a {
+  background-color: #f9f9f9;
+}
+.section-a,
+.section-b {
+  padding: 4rem;
+}
+
+
+
+h1,h2,h3,h4 {font-weight: 400;color: #505050}
+h1 {font-size:1.6rem; line-height:2rem; margin: 0 0 2rem 0;}
+h2 {font-size:1.5rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
+h3 {font-size:1.4rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
+h4 {font-size:1.1rem; margin: 0 0 0.6rem 0;}
+p {margin: 0 0 0.6rem 0;}
+
+[data-subtitle]:before {
+  content: attr(data-subtitle);
+  display: block;
+  font-size: 0.6em;
+  color: #000;
+  line-height: 1.42em;
+}
