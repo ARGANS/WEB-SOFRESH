@@ -140,13 +140,9 @@ nav a {color: inherit;}
   padding: 0 1rem;
 }
 
-.section-a {
-  background-color: #f9f9f9;
-}
+.section-a {background-color:#f9f9f9;}
 .section-a,
-.section-b {
-  padding: 4rem;
-}
+.section-b {padding:4rem;}
 
 
 
@@ -155,6 +151,12 @@ h1 {font-size:1.6rem; line-height:2rem; margin: 0 0 2rem 0;}
 h2 {font-size:1.5rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
 h3 {font-size:1.4rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
 h4 {font-size:1.1rem; margin: 0 0 0.6rem 0;}
+@media (min-width: 992px) {
+	h1 {font-size: 2.2rem; line-height:2.8rem;}
+	h2 {font-size: 2rem; line-height:2.6rem;}
+}
+
+
 p {margin: 0 0 0.6rem 0;}
 
 [data-subtitle]:before {
@@ -163,4 +165,20 @@ p {margin: 0 0 0.6rem 0;}
   font-size: 0.6em;
   color: #000;
   line-height: 1.42em;
+}
+
+.partner-list-a > li + li {margin-left: 3rem;}
+.partner-list-a > li > a > img {
+  display: block;
+  width: 160px;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.partner-list-b > li + li {margin-left: 3rem;}
+.partner-list-b > li > img {
+  display: block;
+  margin-bottom: 2rem;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
 }
