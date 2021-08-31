@@ -1,3 +1,6 @@
+:root {
+  --btn-icon-size: 32px;
+}
 body {
   color: #333;
   font-weight: 400;
@@ -26,11 +29,7 @@ nav a {color: inherit;}
 .main-banner-list > li:not(:first-child) {padding-right: 1rem; padding-left: 1rem;}
 
 
-.sticky-top {position: sticky; top: 0px; z-index: 99999;}
-
-
-
-/* Hamgurger menu icon */
+/* Hamburger menu icon */
 .c-hamburger {
 	display: block;
 	position: relative;
@@ -182,3 +181,8 @@ p {margin: 0 0 0.6rem 0;}
   image-rendering: pixelated;
   image-rendering: -webkit-optimize-contrast;
 }
+
+.btn-icon {display:block;width: var(--btn-icon-size);height: var(--btn-icon-size);}
+.btn-icon > use {/*fill:#c1c1c5;*/transition:fill 0.3s;stroke: #fff;fill: transparent;stroke-width: 1.6px;}
+.btn-icon:focus > use,
+.btn-icon:hover > use {fill:#fff;}

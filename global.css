@@ -245,6 +245,9 @@ details[open] > summary::before {
 }
 
 
+.sticky-top {position: sticky; top: 0px; z-index: 99999;}
+
+
 :root {
 	--visible_gr-992: none;
 	--visible_less-992: block;
