@@ -13,7 +13,7 @@ nav a {color: inherit;}
 
 .top-banner {
   background-color: #01065f;
-  padding: 1rem 0;
+  padding: .6rem 0;
   color: #fff;
 }
 .top-banner li:not(:last-child) {margin-right: 1rem;}
@@ -183,6 +183,9 @@ p {margin: 0 0 0.6rem 0;}
 }
 
 .btn-icon {display:block;width: var(--btn-icon-size);height: var(--btn-icon-size);}
-.btn-icon > use {/*fill:#c1c1c5;*/transition:fill 0.3s;stroke: #fff;fill: transparent;stroke-width: 1.6px;}
-.btn-icon:focus > use,
-.btn-icon:hover > use {fill:#fff;}
+.btn-icon > use {stroke:#fff;fill:transparent;stroke-width:0.09rem;}
+.btn-icon.__animated > use {transition:fill 0.3s;}
+.btn-icon.__animated:focus > use,
+.btn-icon.__animated:hover > use {fill:#fff;}
+.btn-icon.__small {width:24px;height:20px;}
+.btn-icon.__small > use {stroke-width:0.06rem;}
