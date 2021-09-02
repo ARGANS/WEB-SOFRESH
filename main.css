@@ -146,8 +146,8 @@ nav a {color: inherit;}
 
 
 h1,h2,h3,h4 {font-weight: 400;color: #505050}
-h1 {font-size:1.6rem; line-height:2rem; margin: 0 0 2rem 0;}
-h2 {font-size:1.5rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
+h1 {font-size:1.6rem; line-height:2rem; margin: 0 0 2.6rem 0;}
+h2 {font-size:1.5rem; line-height:1.8rem; margin: 0 0 2rem 0;}
 h3 {font-size:1.4rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
 h4 {font-size:1.1rem; margin: 0 0 0.6rem 0;}
 @media (min-width: 992px) {
@@ -228,4 +228,17 @@ p {margin: 0 0 0.6rem 0;}
 }
 textarea.field-a__input {
   resize: vertical;
+}
+
+
+.objectives-list {
+	display: grid;
+	/* grid-template-rows: repeat(4, 180px); */
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
+}
+.objectives-list img {
+  height: 90px;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
 }
