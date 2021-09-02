@@ -96,11 +96,11 @@ button {cursor:pointer; background: transparent;}
 .roffset-c {margin-right:1rem !important;}
 .roffset-d {margin-right:0.5rem !important;}
 
-.doffset-a {margin-bottom:4rem !important;}
-.doffset-b {margin-bottom:2rem !important;}
-.doffset-c {margin-bottom:1rem !important;}
-.doffset-d {margin-bottom:0.5rem !important;}
-.doffset-e {margin-bottom:0.2rem !important;}
+.boffset-a {margin-bottom:4rem !important;}
+.boffset-b {margin-bottom:2rem !important;}
+.boffset-c {margin-bottom:1rem !important;}
+.boffset-d {margin-bottom:0.5rem !important;}
+.boffset-e {margin-bottom:0.2rem !important;}
 
 
 .bcolumn-grid {
