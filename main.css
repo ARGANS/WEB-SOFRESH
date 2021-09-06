@@ -151,8 +151,10 @@ h2 {font-size:1.5rem; line-height:1.8rem; margin: 0 0 2rem 0;}
 h3 {font-size:1.4rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
 h4 {font-size:1.1rem; margin: 0 0 0.6rem 0;}
 @media (min-width: 992px) {
-	h1 {font-size: 2.2rem; line-height:2.8rem;}
-	h2 {font-size: 2rem; line-height:2.6rem;}
+	h1 {font-size:2.6rem;line-height:2.8rem;}
+	h2 {font-size:2.4rem;line-height:2.6rem;}
+  h3 {font-size:1.8rem;line-height:1.8rem;}
+  h4 {font-size:1.6rem;line-height:1.8rem;}
 }
 
 
@@ -242,3 +244,52 @@ textarea.field-a__input {
   image-rendering: pixelated;
   image-rendering: -webkit-optimize-contrast;
 }
+
+.links-of-interest {
+  flex-wrap: wrap;
+}
+.links-of-interest a {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding: 1rem 2rem;
+  color: #666;
+  background: #ebebeb;
+  white-space: nowrap;
+  border-radius: 6px;
+}
+.links-of-interest > li {
+  margin: 0 1rem 1rem 0;
+}
+.links-of-interest a:hover {
+  color: #5e5e5e;
+  background-color: #dcdcdc;
+  text-decoration: none;
+}
+
+/* SLIDER */
+.rev_slider .ares {height: 21px;}
+.rev_slider .ares .tp-bullet {width: 15px; height: 15px;}
+.rev_slider .ares .tp-bullet.selected {width: 21px; height: 21px; margin-top: -3px; margin-left: -3px;}
+.rev_slider .ares .tp-bullet .tp-bullet-title {display: none;}
+.rs-background-video-layer iframe {width: 80% !important; left: 10% !important;}
+/* FIX VIDEO YT */
+.rs-fullvideo-cover {border: none!important;}
+.rs-background-video-layer iframe{border: none!important; width: 69% !important;left: 16.5% !important;}
+.tparrows {
+  width:50px;height:50px;position: absolute;z-index:10000;cursor:pointer;
+}
+.tp-leftarrow {
+  background: url(/img/arrow_left.svg) no-repeat;
+}
+.tp-rightarrow {
+  background: url(/img/arrow_right.svg) no-repeat;
+}
+
+
+/* .uranus.tparrows {width:50px;height:50px;background:red; position: absolute; z-index: 10000;}
+      .uranus.tparrows:before {width:50px;height:50px; line-height:50px; font-size:40px;transition:all 0.3s; -webkit-transition:all 0.3s;}
+    .uranus.tparrows:hover:before {opacity:0.75;}
+  .tp-rightarrow{
+
+  }  */
