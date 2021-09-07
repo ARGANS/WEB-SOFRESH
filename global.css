@@ -253,6 +253,7 @@ details[open] > summary::before {
 	--visible_less-992: block;
 	--col-direction_gr-992: column;
 	--col-direction_margin: 4rem 0 0 0;
+	--visible_gr-1680: none;
 }
 @media (min-width: 992px) {
 	:root {
@@ -262,7 +263,13 @@ details[open] > summary::before {
 		--col-direction_margin: 0 0 0 4rem;
 	}
 }
+@media (min-width: 1600px) {
+	:root {
+		--visible_gr-1680: block;
+	}
+}
 .if-gr-then-992 {display: var(--visible_gr-992);}
 .if-less-then-992 {display: var(--visible_less-992);}
+.if_wsxga {display: var(--visible_gr-1680);}
 .in-col_gr-then-992 {flex-direction: var(--col-direction_gr-992);}
 .in-col_gr-then-992 > div + div {margin: var(--col-direction_margin)}

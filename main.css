@@ -86,7 +86,7 @@ nav a {color: inherit;}
 }
 .dropdown-menu-list {padding: 1rem 0;}
 .dropdown-menu-list > li {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 2rem;
   padding: 1.1rem 0;
   border-top: 1px solid #303030;
@@ -108,7 +108,7 @@ nav a {color: inherit;}
 .c-hamburger--htx.is-active span::after {transition-delay: 0s, 0.3s;}
 .c-hamburger--htx.is-active > span,
 #menu:checked + .bcontainer .c-hamburger--htx > span {background-color: transparent;}
-#menu:checked ~ .dropdown-menu {height: 510px;}
+#menu:checked ~ .dropdown-menu {height: 570px;}
 
 
 .footer {
@@ -146,15 +146,16 @@ nav a {color: inherit;}
 
 
 h1,h2,h3,h4 {font-weight: 400;color: #505050}
-h1 {font-size:1.6rem; line-height:2rem; margin: 0 0 2.6rem 0;}
-h2 {font-size:1.5rem; line-height:1.8rem; margin: 0 0 2rem 0;}
-h3 {font-size:1.4rem; line-height:1.8rem; margin: 0 0 1.6rem 0;}
-h4 {font-size:1.1rem; margin: 0 0 0.6rem 0;}
+h1 {font-size:1.6rem; line-height:2rem; margin: 0 0 3.6rem 0;}
+h2 {font-size:1.5rem; line-height:1.8rem; margin: 0 0 3rem 0;}
+h3 {font-size:1.4rem; line-height:1.8rem; margin: 0 0 2rem 0;}
+h4 {font-size:1.1rem; margin: 0 0 1.2rem 0; font-weight: bold;}
 @media (min-width: 992px) {
 	h1 {font-size:2.6rem;line-height:2.8rem;}
 	h2 {font-size:2.4rem;line-height:2.6rem;}
   h3 {font-size:1.8rem;line-height:1.8rem;}
-  h4 {font-size:1.6rem;line-height:1.8rem;}
+  h4 {font-size:1.2rem;line-height:1.4rem;}
+  p {font-size:1.01rem;}
 }
 
 
@@ -235,9 +236,8 @@ textarea.field-a__input {
 
 .objectives-list {
 	display: grid;
-	/* grid-template-rows: repeat(4, 180px); */
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 2rem;
+	grid-gap: 3rem 2rem;
 }
 .objectives-list img {
   height: 90px;
@@ -257,6 +257,17 @@ textarea.field-a__input {
   background: #ebebeb;
   white-space: nowrap;
   border-radius: 6px;
+}
+.links-of-interest a > span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.links-of-interest a:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  border: 6px solid transparent;
+  border-left-color: #666;
 }
 .links-of-interest > li {
   margin: 0 1rem 1rem 0;
@@ -293,3 +304,21 @@ textarea.field-a__input {
   .tp-rightarrow{
 
   }  */
+
+.icon-objectives {
+  width: 48px;
+  height: 48px;
+}
+.icon-objectives.__icon3 > use,
+.icon-objectives.__icon1 > use {
+  fill: none;
+  stroke: #111111;
+  stroke-width:1px;
+}
+.icon-objectives.__icon4 > use,
+.icon-objectives.__icon8 > use,
+.icon-objectives.__icon7 > use,
+.icon-objectives.__icon2 > use {
+  fill: #111111;
+  stroke: none;
+}
