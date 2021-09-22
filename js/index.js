@@ -94,3 +94,64 @@ var revapi1,
     
     }; /* END OF ON LOAD FUNCTION */
 }()); /* END OF WRAPPING FUNCTION */
+
+
+function createForm(action_s, fields){
+    const target = 'gf1';
+
+    return new Promise(function(resolve, reject) {
+        const $form = document.createElement('form');
+        $form.setAttribute('action', action_s);
+        $form.setAttribute('method', 'POST');
+        $form.setAttribute('target', target);
+
+        Object.keys(fields || {}).forEach(fieldName => {
+            const $input = document.createElement('input');
+            $input.setAttribute('type', 'hidden');
+            $input.setAttribute('name', fieldName);
+            $input.setAttribute('value', fields[fieldName]);
+            $form.appendChild($input);
+        });
+
+        const $iframe = document.createElement('iframe');
+        $iframe.setAttribute('id', target);
+        $iframe.setAttribute('name', target);
+        $iframe.setAttribute('title', target);
+        $iframe.onerror = reject;
+        $iframe.onload = resolve;
+        document.body.appendChild($iframe);
+        document.body.appendChild($form);
+        $form.submit();
+    })
+}
+
+function onSubmit(event) {
+    event.preventDefault();
+
+    const {
+        email: $email,
+        message: $message,
+        name: $name,
+        subject: $subject
+    } = event.target?.elements;
+
+    if (typeof($message) === 'undefined' || !$message.value) {
+        throw 'Can not find the message input';
+    }
+
+    const message = `Name: ${$name.value}<br/>Email: ${$email.value}<br/>Subject: ${$subject.value}<br/>Message: ${$message.value}<br/>`;
+    const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdKA6vlDNzOv1iXRrK674pEwEHa0jmn3DRBsNLZb8W6HgW3OQ/formResponse';
+    const fields = {
+        'entry.546115170': 'SO Fresh: new message', 
+        'entry.861590665': message,
+        'entry.1470631581': 'rcatany@argans.co.uk',
+       };
+
+    createForm(url, fields).then((e) => {
+        alert('Thank you for your message!');
+        event.target.reset();
+    }).catch((e) => {
+        console.log('Error');
+        console.dir(e);
+    });
+}
