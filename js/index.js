@@ -144,7 +144,7 @@ function onSubmit(event) {
     const fields = {
         'entry.546115170': 'SO Fresh: new message', 
         'entry.861590665': message,
-        'entry.1470631581': 'rcatany@argans.co.uk',
+        'entry.1470631581': 'rcatany@argans.co.uk,sofresh@argans.co.uk',
        };
 
     createForm(url, fields).then((e) => {
@@ -155,3 +155,26 @@ function onSubmit(event) {
         console.dir(e);
     });
 }
+
+(function($stickyElements){
+    Array.from($stickyElements).forEach(function($stickyElement){
+        if (!$stickyElement.nextSibling) return;
+        const $target = document.createElement('div');
+        $target.classList.add('sticky-helper');
+        $target.style.width = '100%';
+        $target.style.height = 0;
+        $stickyElement.parentNode.insertBefore($target, $stickyElement.nextSibling);
+
+        const observer = new IntersectionObserver( 
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    $stickyElement.classList.toggle('isSticky', entry.intersectionRatio < 1)
+                })
+            },
+            {
+                threshold: [1]
+            }
+        );
+        observer.observe($target);
+    });
+}(document.querySelectorAll('.sticky-top')))
