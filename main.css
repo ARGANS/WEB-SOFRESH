@@ -172,15 +172,15 @@ p {margin: 0 0 0.6rem 0;}
 }
 
 .partner-list-a > li + li {margin-left: 3rem;}
-.partner-list-a > li > a > img {
+.partner-list-a > li img {
   display: block;
-  width: 160px;
+  width: 180px;
   image-rendering: pixelated;
   image-rendering: -webkit-optimize-contrast;
 }
 
 .partner-list-b > li + li {margin-left: 3rem;}
-.partner-list-b > li > img {
+.partner-list-b > li img {
   display: block;
   margin-bottom: 2rem;
   image-rendering: pixelated;
